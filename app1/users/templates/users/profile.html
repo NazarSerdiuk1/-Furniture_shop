@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="row">
-    <div class="container mt-5">
+    <div class="container mt-5 text-black">
         <div class="row">
             <!-- Профіль з даними користувача -->
             <div class="col-md-5">
@@ -29,28 +29,6 @@
                                     {% if form.image.errors %}
                                     <div class="alert alert-danger alert-dismissible fade show">{{form.image.errors}}</div>
                                     {% endif %} {% endcomment %}
-                            </div>
-                            <div class="col-md-12 mb-3">
-                                <label for="id_first_name" class="form-label">Ім'я*</label>
-                                <input type="text" class="form-control" id="id_first_name"
-                                    name="first_name"
-                                    placeholder="Введіть ваше ім'я"
-                                    value="{{ form.first_name.value }}"
-                                    required>
-                                    {% if form.first_name.errors %}
-                                    <div class="alert alert-danger alert-dismissible fade show">{{form.first_name.errors}}</div>
-                                    {% endif %}
-                            </div>
-                            <div class="col-md-12 mb-3">
-                                <label for="id_last_name" class="form-label">Прізвище*</label>
-                                <input type="text" class="form-control" id="id_last_name"
-                                    name="last_name"
-                                    placeholder="Введіть ваше прізвище"
-                                    value="{{ form.last_name.value }}"
-                                    required>
-                                    {% if form.last_name.errors %}
-                                    <div class="alert alert-danger alert-dismissible fade show">{{form.last_name.errors}}</div>
-                                    {% endif %}
                             </div>
                             <div class="col-md-12 mb-3">
                                 <label for="id_username" class="form-label">Ім'я користувача*</label>
@@ -94,7 +72,7 @@
             </div>
             <!-- Оформленные заказы -->
             <div class="col-md-12">
-                <div class=" bg-white p-4 mb-4 mx-2 rounded custom-shadow">
+                <div class=" bg-white p-4 mb-4 mx-2 rounded custom-shadow text-black">
                     <h3 class="text-center mb-4">Мої замовлення</h3>
                     <!-- Разметка заказов -->
                     <div class="container">
