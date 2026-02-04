@@ -62,14 +62,14 @@
                         {% for product in goods  %} 
                         <!-- Карта товара -->
                         <div class="col-lg-4 col-md-6 p-4">
-                            <div class="card border-dark rounded custom-shadow">
+                            <div class="card border-dark rounded custom-shadow h-100">
                                 <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
-                                <div class="card-body">
+                                <div class="card-body bg-primary text-white">
                                     <a href="{% url "catalog:product" product.slug %}">
-                                        <p class="card-title">{{ product.name }}</p>
+                                        <p class="card-title text-white">{{ product.name }}</p>
                                     </a>
                                     <p class="card-text">{{ product.description|truncatechars:30 }}</p>
-                                    <p class="product_id">id: {{ product.display_id }}</p>
+                                    <p class="product_id text-white">id: {{ product.display_id }}</p>
                                     <div class="d-flex justify-content-between">
                                         {% if product.discount %}
                                             <p><s>{{ product.price }}</s> $</p>
@@ -78,14 +78,6 @@
                                         {% else %}
                                             <p><strong>{{ product.price }} $</strong></p> 
                                         {% endif %}
-                                         
-
-                                        <a href="{% url "cart:cart_add"  %}" class="btn add-to-cart"
-                                        data-product-id="{{ product.id}}">
-                                            {% csrf_token %}
-                                            <img class="mx-1" src="{% static "deps/icons/cart-plus.svg" %}" alt="Catalog Icon"
-                                                width="32" height="32">
-                                        </a>
                                     </div>
                                 </div>
                             </div>
